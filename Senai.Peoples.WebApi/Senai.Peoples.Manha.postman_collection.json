@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "0e63bbd4-b6c5-46fb-9b3e-99c72b26b764",
+		"name": " Senai.Peoples.Manha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Funcionarios",
+			"item": [
+				{
+					"name": "Funcionarios.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Romero\",\n\t\"sobrenome\": \"Brito\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.AlterarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"sobrenome\" : \"Britto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.DeletarPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.BuscarFuncionarioPorNome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios/buscar/catarina",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios",
+								"buscar",
+								"catarina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.ListarNomeCompleto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios/nomecompleto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios",
+								"nomecompleto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionarios.BuscarPorOrdem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/funcionarios/ordem/desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"funcionarios",
+								"ordem",
+								"desc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
