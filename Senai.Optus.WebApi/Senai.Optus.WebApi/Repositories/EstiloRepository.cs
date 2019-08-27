@@ -18,9 +18,8 @@ namespace Senai.Optus.WebApi.Repositories
 
             }
         }
-    }
 
-    public Estilos BuscarPorId(int id)
+        public Estilos BuscarPorId(int id)
     {
         using (OptusContext ctx = new OptusContext())
         {
@@ -30,7 +29,7 @@ namespace Senai.Optus.WebApi.Repositories
         }
     }
 
-    public void Cadastrar(Estilos estilo)
+        public void Cadastrar(Estilos estilo)
     {
         using(OptusContext ctx = new OptusContext())
         {
@@ -39,7 +38,7 @@ namespace Senai.Optus.WebApi.Repositories
         }
     }
 
-    public void Deletar(int id)
+        public void Deletar(int id)
     {
         using (OptusContext ctx = new OptusContext())
         {
@@ -49,7 +48,7 @@ namespace Senai.Optus.WebApi.Repositories
         }
     }
 
-    public void Atualizar(Estilos estilo)
+        public void Atualizar(Estilos estilo)
     {
         using (OptusContext ctx = new OptusContext())
         {
@@ -59,4 +58,6 @@ namespace Senai.Optus.WebApi.Repositories
             ctx.SaveChanges();
         }
     }
+
+   }
 }
