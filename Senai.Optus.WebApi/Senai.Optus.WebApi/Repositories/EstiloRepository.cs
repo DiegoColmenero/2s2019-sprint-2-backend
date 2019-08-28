@@ -49,7 +49,7 @@ namespace Senai.Optus.WebApi.Repositories
     }
 
         public void Atualizar(Estilos estilo)
-    {
+        {
         using (OptusContext ctx = new OptusContext())
         {
             Estilos estiloBuscado = ctx.Estilos.FirstOrDefault(x => x.IdEstilo == estilo.IdEstilo);

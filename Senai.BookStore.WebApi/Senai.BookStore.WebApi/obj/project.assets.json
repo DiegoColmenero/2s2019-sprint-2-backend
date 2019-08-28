@@ -12652,11 +12652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46938238804\\Desktop\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\46938238804\\Desktop\\2s2019-sprint-2-backend\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi.csproj",
       "projectName": "Senai.BookStore.WebApi",
-      "projectPath": "C:\\Users\\46938238804\\Desktop\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi.csproj",
+      "projectPath": "C:\\Users\\46938238804\\Desktop\\2s2019-sprint-2-backend\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi.csproj",
       "packagesPath": "C:\\Users\\46938238804\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46938238804\\Desktop\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\46938238804\\Desktop\\2s2019-sprint-2-backend\\Senai.BookStore.WebApi\\Senai.BookStore.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
