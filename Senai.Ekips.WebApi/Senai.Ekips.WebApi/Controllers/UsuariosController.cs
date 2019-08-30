@@ -61,5 +61,12 @@ namespace Senai.Ekips.WebApi.Controllers
                 return BadRequest(new { mensagem = "Erro." + ex.Message });
             }
         }
+
+        [HttpGet]
+        public IActionResult Listar()
+        {
+            return Ok(loginRepository.Listar());
+            
+        }
     }
 }

@@ -12228,11 +12228,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46938238804\\Desktop\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\46938238804\\Desktop\\2s2019-sprint-2-backend\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi.csproj",
       "projectName": "Senai.Ekips.WebApi",
-      "projectPath": "C:\\Users\\46938238804\\Desktop\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi.csproj",
+      "projectPath": "C:\\Users\\46938238804\\Desktop\\2s2019-sprint-2-backend\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi.csproj",
       "packagesPath": "C:\\Users\\46938238804\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46938238804\\Desktop\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\46938238804\\Desktop\\2s2019-sprint-2-backend\\Senai.Ekips.WebApi\\Senai.Ekips.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

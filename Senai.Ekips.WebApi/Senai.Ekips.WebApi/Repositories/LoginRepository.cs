@@ -10,7 +10,7 @@ namespace Senai.Ekips.WebApi.Repositories
     public class LoginRepository
     {
         
-            public Usuarios BuscarPorEmailESenha(LoginViewModel login)
+        public Usuarios BuscarPorEmailESenha(LoginViewModel login)
             {
                 using (EkipsContext context = new EkipsContext())
                 {
@@ -26,6 +26,19 @@ namespace Senai.Ekips.WebApi.Repositories
                     }
                 }
             }
+
+        public List<Usuarios> Listar()
+        {
+            using (EkipsContext context = new EkipsContext())
+            {
+                return context.Usuarios.ToList();
+                
+            }
         }
+
+
+
+
+    }
     
 }
