@@ -1,0 +1,14 @@
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\bin\Debug\netcoreapp2.1\Senai.AutoPecas.Api.deps.json
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\bin\Debug\netcoreapp2.1\Senai.AutoPecas.Api.runtimeconfig.json
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\bin\Debug\netcoreapp2.1\Senai.AutoPecas.Api.runtimeconfig.dev.json
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\bin\Debug\netcoreapp2.1\Senai.AutoPecas.Api.dll
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.csprojAssemblyReference.cache
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.csproj.CoreCompileInputs.cache
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.RazorAssemblyInfo.cache
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.RazorAssemblyInfo.cs
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.AssemblyInfoInputs.cache
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.AssemblyInfo.cs
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.RazorTargetAssemblyInfo.cache
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\bin\Debug\netcoreapp2.1\Senai.AutoPecas.Api.pdb
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.dll
+C:\Users\46938238804\source\repos\Senai.AutoPecas.Api\Senai.AutoPecas.Api\obj\Debug\netcoreapp2.1\Senai.AutoPecas.Api.pdb
