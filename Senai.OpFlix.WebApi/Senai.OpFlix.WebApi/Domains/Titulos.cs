@@ -20,5 +20,7 @@ namespace Senai.OpFlix.WebApi.Domains
         public Plataformas IdPlataformaNavigation { get; set; }
         public Produtoras IdProdutoraNavigation { get; set; }
         public TiposTitulo IdTipoTituloNavigation { get; set; }
+
+        
     }
 }

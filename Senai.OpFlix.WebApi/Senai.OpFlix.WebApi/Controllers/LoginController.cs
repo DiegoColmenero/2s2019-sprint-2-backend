@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -27,6 +28,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             UsuarioRepository = new UsuarioRepository();
         }
 
+        /// <summary>
+        /// Método que realiza o login do usuário
+        /// </summary>
+        /// <returns>Login</returns>
         [HttpPost]
         public IActionResult Login(LoginViewModel login)
         {
@@ -65,6 +70,60 @@ namespace Senai.OpFlix.WebApi.Controllers
             }
         }
 
-        
+
+        /// <summary>
+        /// Método que lista todos os usuários caso seja um administrador
+        /// </summary>
+        /// <returns>Lista de usuários</returns>
+        [Authorize(Roles = "ADMINISTRADOR")]
+        [HttpGet]
+        public IActionResult Listar()
+        {
+            return Ok(UsuarioRepository.Listar());
+        }
+
+        /// <summary>
+        /// Método que cadastra um novo usuário, se não tiver logado
+        /// </summary>
+        /// <returns>Lista de usuários</returns>
+        [HttpPost("cadastrar")]
+        public IActionResult Cadastrar(Usuarios usuario)
+        {
+
+            string permissao;
+
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            try
+            {
+
+                permissao = identity.FindFirst(ClaimTypes.Role).Value;
+            }
+            catch (Exception)
+            {
+
+                permissao = "manda o zap kk";
+            }
+
+            if (!permissao.Equals("ADMINISTRADOR"))
+            {
+                
+                permissao = "CLIENTE";
+                usuario.TipoDeUsuario = permissao;
+                UsuarioRepository.Cadastrar(usuario);
+                return Ok();
+            }
+            try
+            {
+                UsuarioRepository.Cadastrar(usuario);
+                return Ok();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

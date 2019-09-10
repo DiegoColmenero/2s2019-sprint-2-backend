@@ -8,6 +8,10 @@ namespace Senai.OpFlix.WebApi.Interfaces
 {
     public interface ITiposTituloRepository
     {
+        /// <summary>
+        /// Método que lista todos os tipos de titulos
+        /// </summary>
+        /// <returns>Lista de tipos de titulos</returns>
         List<TiposTitulo> Listar();
     }
 }

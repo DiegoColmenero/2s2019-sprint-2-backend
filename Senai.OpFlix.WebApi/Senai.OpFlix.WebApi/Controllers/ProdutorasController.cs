@@ -23,6 +23,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             ProdutoraRepository = new ProdutoraRepository();
         }
 
+        /// <summary>
+        /// Método que lista todas as produtoras
+        /// </summary>
+        /// <returns>Lista de produtoras</returns>
         [Authorize]
         [HttpGet]
         public IActionResult Listar()

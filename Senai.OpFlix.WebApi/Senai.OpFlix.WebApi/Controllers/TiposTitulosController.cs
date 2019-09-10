@@ -22,9 +22,12 @@ namespace Senai.OpFlix.WebApi.Controllers
         {
             TiposTituloRepository = new TiposTituloRepository();
         }
-        
 
 
+        /// <summary>
+        /// Método que lista todos os tipos de titulos
+        /// </summary>
+        /// <returns>Lista de tipos de titulos</returns>
         [Authorize]
         [HttpGet]
         public IActionResult Listar()

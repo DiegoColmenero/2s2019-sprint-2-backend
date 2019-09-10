@@ -8,6 +8,10 @@ namespace Senai.OpFlix.WebApi.Interfaces
 {
     public interface IProdutoraRepository
     {
+        /// <summary>
+        /// Método que lista todas as produtoras
+        /// </summary>
+        /// <returns>Lista de produtoras</returns>
         List<Produtoras> Listar();
     }
 }
