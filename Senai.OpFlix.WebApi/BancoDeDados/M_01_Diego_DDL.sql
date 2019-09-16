@@ -1,0 +1,49 @@
+CREATE DATABASE M_OpFlix
+
+USE M_OpFlix
+
+CREATE TABLE Usuarios(
+IdUsuario			INT PRIMARY KEY IDENTITY
+,Nome				VARCHAR(200)NOT NULL
+,Email				VARCHAR(200)NOT NULL UNIQUE
+,Senha				VARCHAR(200)NOT NULL
+,DataNascimento		DATE
+,TipoDeUsuario		VARCHAR(200)NOT NULL
+);
+
+CREATE TABLE Produtoras(
+IdProdutora			INT PRIMARY KEY IDENTITY
+,Produtora			VARCHAR(200)NOT NULL UNIQUE
+);
+
+CREATE TABLE Plataformas(
+IdPlataforma		INT PRIMARY KEY IDENTITY
+,Plataforma			VARCHAR(200)NOT NULL UNIQUE
+);
+
+CREATE TABLE TiposTitulo(
+IdTipoTitulo		INT PRIMARY KEY IDENTITY
+,TipoTitulo			VARCHAR(200)NOT NULL UNIQUE
+);
+
+CREATE TABLE Categorias(
+IdCategoria			INT PRIMARY KEY IDENTITY
+,Categoria			VARCHAR(200)NOT NULL UNIQUE
+);
+
+CREATE TABLE Titulos(
+IdTitulo			INT PRIMARY KEY IDENTITY
+,Nome				VARCHAR(200)NOT NULL UNIQUE
+,Sinopse			TEXT
+,Duracao			INT NOT NULL
+,DataLancamento		DATE NOT NULL
+,IdTipoTitulo		INT FOREIGN KEY REFERENCES TiposTitulo (IdTipoTitulo)
+,IdCategoria		INT FOREIGN KEY REFERENCES Categorias (IdCategoria)
+,IdPlataforma		INT FOREIGN KEY REFERENCES Plataformas (IdPlataforma)
+,IdProdutora		INT FOREIGN KEY REFERENCES Produtoras (IdProdutora)
+);
+
+CREATE TABLE Favoritos(
+IdTitulo			INT FOREIGN KEY REFERENCES Titulos (IdTitulo)
+,IdUsuario			INT FOREIGN KEY REFERENCES Usuarios (IdUsuario)
+);
