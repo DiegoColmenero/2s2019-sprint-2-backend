@@ -27,6 +27,17 @@ namespace Senai.OpFlix.WebApi.Controllers
 
 
         /// <summary>
+        /// Método que mostra quantos dias restam para o lançamento
+        /// </summary>
+        /// <returns>Lista de titulos</returns>
+        [Authorize]
+        [HttpGet("diasRestantes")]
+        public IActionResult MostrarQntsDiasFaltam()
+        {
+            return Ok(TituloRepository.MostrarQuantosDiasFaltam());
+        }
+
+        /// <summary>
         /// Método que lista todos os titulos
         /// </summary>
         /// <returns>Lista de titulos</returns>
@@ -88,6 +99,10 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Método que busca os títulos relacionados a uma determinada plataforma
+        /// </summary>
+        /// <returns>Titulos relacionados a determinada plataforma</returns>
         [Authorize]
         [HttpGet("{plataforma}/b")]
         public IActionResult BuscarTituloPorPlataforma(string plataforma)
@@ -95,5 +110,8 @@ namespace Senai.OpFlix.WebApi.Controllers
             return Ok(TituloRepository.BuscarTituloPorPlataforma(plataforma));
         }
 
+        
+    
     }
-}
+
+}  

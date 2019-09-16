@@ -154,7 +154,40 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
-       
-    }
+        public List<TitulosEDiasViewModel> MostrarQuantosDiasFaltam()
+        {
+            List<TitulosEDiasViewModel> titulosEDiasLista = new List<TitulosEDiasViewModel>();
+                using (SqlConnection connection = new SqlConnection(StringConexao))
+                {
+                    string Query = "EXEC  MostrarQuantosDiasFaltam";
+                    connection.Open();
+                    SqlDataReader sdr;
+
+
+                    using (SqlCommand command = new SqlCommand(Query, connection))
+                    {
+                        sdr = command.ExecuteReader();
+
+                        while (sdr.Read())
+                        {
+                        TitulosEDiasViewModel titulosEDias = new TitulosEDiasViewModel
+                        {
+                            Nome = sdr["Nome"].ToString(),
+                            DiasRestantes = sdr["DiasRestantes"].ToString() + " dias"
+                            
+                            };
+
+                        if (titulosEDias.DiasRestantes.Equals("0 dias"))
+                        {
+                            titulosEDias.DiasRestantes = "Este título ja foi lançado";
+                        }
+                            titulosEDiasLista.Add(titulosEDias);
+                        }
+                    }
+                    return titulosEDiasLista;
+                }
+
+            }
+        }
 }
 

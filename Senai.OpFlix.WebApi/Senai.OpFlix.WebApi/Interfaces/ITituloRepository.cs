@@ -39,7 +39,12 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// <returns>Deleta um titulo</returns>
         void Deletar(int id);
 
-
+        /// <summary>
+        /// Método que busca os títulos relacionados a uma determinada plataforma
+        /// </summary>
+        /// <returns>Titulos relacionados a determinada plataforma</returns>
         List<TituloViewModel> BuscarTituloPorPlataforma(string plataforma);
+
+        List<TitulosEDiasViewModel> MostrarQuantosDiasFaltam();
     }
 }
