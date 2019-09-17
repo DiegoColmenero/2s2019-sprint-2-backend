@@ -1,4 +1,5 @@
-﻿using Senai.OpFlix.WebApi.Interfaces;
+﻿using Senai.OpFlix.WebApi.Domains;
+using Senai.OpFlix.WebApi.Interfaces;
 using Senai.OpFlix.WebApi.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,17 +15,35 @@ namespace Senai.OpFlix.WebApi.Repositories
         List<FavoritosViewModel> favoritos = new List<FavoritosViewModel>();
 
 
-        public List<FavoritosViewModel> Listar()
+        
+
+        public void Favoritar(FavoritosViewModel favorito)
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao))
+            {
+                string Query = "insert into Favoritos (IdTitulo, IdUsuario) values(@IdTitulo,@IdUsuario);";
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@IdTitulo", favorito.TituloId);
+                cmd.Parameters.AddWithValue("@IdUsuario", favorito.UsuarioId);
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public List<FavoritosViewModel> Listar(int id)
         {
             using (SqlConnection connection = new SqlConnection(StringConexao))
             {
-                string Query = "SELECT * FROM Favoritos";
+                string Query = "SELECT * FROM Favoritos where IdUsuario = @IdUsuario";
                 connection.Open();
                 SqlDataReader sdr;
 
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
+                    command.Parameters.AddWithValue("@IdUsuario", id);
                     sdr = command.ExecuteReader();
 
                     while (sdr.Read())

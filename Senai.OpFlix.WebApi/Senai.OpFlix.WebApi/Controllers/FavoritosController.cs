@@ -27,14 +27,39 @@ namespace Senai.OpFlix.WebApi.Controllers
 
 
         /// <summary>
-        /// Método que lista os titulos favoritados
+        /// Método que lista os titulos favoritados pelo usuário
         /// </summary>
         /// <returns>Lista de favoritos</returns>
         [Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(FavoritoRepository.Listar());
+            int id = Convert.ToInt32(User.Claims.FirstOrDefault(claim => claim.Type == JwtRegisteredClaimNames.Jti).Value);
+            return Ok(FavoritoRepository.Listar(id));
+        }
+
+
+        /// <summary>
+        /// Método que possibilita um usuário favoritar um titulo
+        /// </summary>
+        /// <returns>Titulo favoritado</returns>
+        [Authorize]
+        [HttpPost("{tituloId}")]
+        public IActionResult Favoritar(int tituloId)
+        {
+            FavoritosViewModel favorito = new FavoritosViewModel();
+            try
+            {
+                favorito.UsuarioId = Convert.ToInt32(User.Claims.FirstOrDefault(claim => claim.Type == JwtRegisteredClaimNames.Jti).Value);
+                favorito.TituloId = tituloId;
+                FavoritoRepository.Favoritar(favorito);
+                return Ok();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

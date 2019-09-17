@@ -701,7 +701,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYm9yYUBnbWFpbC5jb20iLCJqdGkiOiI1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQ0xJRU5URSIsImV4cCI6MTU2ODYzNjU1MiwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.QB835uMdDYZlMKLk8tH4O8q4efl_OCdppemezIPRazc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYm9yYUBnbWFpbC5jb20iLCJqdGkiOiI1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQ0xJRU5URSIsImV4cCI6MTU2ODcxOTcxMSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.f8F2aVwA8TnYh3LKqQwvWu5fJJi-gzgKEQVVUoaRSYM",
 									"type": "string"
 								}
 							]
@@ -718,6 +718,48 @@
 							"path": [
 								"api",
 								"favoritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Favoritos.Favoritar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYm9yYUBnbWFpbC5jb20iLCJqdGkiOiI1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQ0xJRU5URSIsImV4cCI6MTU2ODcxOTcxMSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.f8F2aVwA8TnYh3LKqQwvWu5fJJi-gzgKEQVVUoaRSYM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/favoritos/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"favoritos",
+								"25"
 							]
 						}
 					},
